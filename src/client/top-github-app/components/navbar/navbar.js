@@ -11,7 +11,7 @@ import {
 import { userInfo } from '../user-info/user-info';
 import { MyNavItem } from './navitem';
 import { BaseComponent } from '../../../common/base-component';
-import { subscribeEvent } from './../../../../utils/utils';
+import { subscribeEvent } from './../../../../utils/event-utils';
 
 class MyNavbar extends BaseComponent {
     constructor(props, context) {

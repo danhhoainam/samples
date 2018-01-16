@@ -9,7 +9,7 @@ class Users extends React.Component {
                     this.props.users.map((username, i) => {
                         return (
                             <div key={i} className="btn btn-primary m-2">
-                                <Link to={`/person/${username}`}>{username}</Link>
+                                <Link to={`/person/${username}`} className="text-white no-underline">{username}</Link>
                             </div>
                         );
                     })

@@ -30,9 +30,15 @@ class PersonPage extends BaseComponent {
                 { this.state.profile && 
                     (
                         <Fragment>
-                            <img src={this.state.profile.avatar_url} />
-                            <h1>{this.state.profile.name}</h1>
-                            <h5>{this.state.profile.location}</h5>
+                            <div className="container mt-5">
+                                <div class="media">
+                                    <img class="d-flex mr-3 rounded-circle" width="128" alt="Image" src={this.state.profile.avatar_url} />
+                                    <div class="media-body">
+                                        <h4 class="card-title">{this.state.profile.name}</h4>
+                                        <p class="card-text">{this.state.profile.location}</p>
+                                    </div>
+                                </div>
+                            </div>
                         </Fragment>
                     )
                 }
