@@ -1,0 +1,16 @@
+.navbar {
+    border-bottom: 1px solid white;
+}
+
+.carousel-caption {
+    top: 40%;
+    bottom: auto;
+}
+
+.form-inline {
+    justify-content: center;
+}
+
+.fa-search {
+    color: white;
+}
