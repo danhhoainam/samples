@@ -46,7 +46,7 @@ class MyNavbar extends BaseComponent {
 
         return (
             <Navbar color="primary" expand="md" dark>
-                <NavbarBrand href="/">TOP GITHUB</NavbarBrand>
+                <NavbarBrand tag={Link} to="/">TOP GITHUB</NavbarBrand>
 
                 <NavbarToggler onClick={this.toggleNavbar} />
 
