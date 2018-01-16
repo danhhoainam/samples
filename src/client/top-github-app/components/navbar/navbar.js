@@ -19,7 +19,8 @@ class MyNavbar extends BaseComponent {
         super(props, context);
 
         this.state = {
-            isOpenedNavbar: false
+            isOpenedNavbar: false,
+            prevPath: ''
         };
 
         subscribeEvent(this, userInfo, () => this.forceUpdate());
@@ -34,6 +35,7 @@ class MyNavbar extends BaseComponent {
     render() {
         let user = userInfo.getUser();
         const { history } = this.props;
+        const isRoot = history.location.pathname === '/';
 
         const renderLinkNavItem = (path, label) => {
             const active = history.location.pathname === path;
@@ -46,11 +48,15 @@ class MyNavbar extends BaseComponent {
         }
 
         const renderNavBrand = () => {
-            const isRoot = history.location.pathname === '/';
-            return  <NavbarBrand tag={Link} to="/">
-                        {!isRoot && <i className="ion-chevron-left" />} 
+            
+            return <NavbarBrand onClick={goToMenu} className="text-white">
+                        {!isRoot && <i className="ion-chevron-left pr-2" /> }
                         {isRoot ? 'TOP GITHUB' : 'Back'}
                     </NavbarBrand>;
+        }
+
+        const goToMenu = () => {
+            !isRoot && history.goBack();
         }
 
         return (

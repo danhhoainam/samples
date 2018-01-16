@@ -31,11 +31,11 @@ class PersonPage extends BaseComponent {
                     (
                         <Fragment>
                             <div className="container mt-5">
-                                <div class="media">
-                                    <img class="d-flex mr-3 rounded-circle" width="128" alt="Image" src={this.state.profile.avatar_url} />
-                                    <div class="media-body">
-                                        <h4 class="card-title">{this.state.profile.name}</h4>
-                                        <p class="card-text">{this.state.profile.location}</p>
+                                <div className="media">
+                                    <img className="d-flex mr-3 rounded-circle" width="128" alt="Image" src={this.state.profile.avatar_url} />
+                                    <div className="media-body">
+                                        <h4 className="card-title">{this.state.profile.name}</h4>
+                                        <p className="card-text">{this.state.profile.location}</p>
                                     </div>
                                 </div>
                             </div>
