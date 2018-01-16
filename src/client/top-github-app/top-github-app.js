@@ -3,7 +3,7 @@ import BaseComponent from './../common/base-component';
 import AppRouter from './routers/app-router';
 
 import 'normalize.css/normalize.css';
-import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './../common/styles/styles.scss';
 

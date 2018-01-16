@@ -5,7 +5,8 @@ import {
     Navbar,
     NavbarToggler,
     NavbarBrand,
-    Nav
+    Nav,
+    
 } from 'reactstrap';
 
 import { userInfo } from '../user-info/user-info';
@@ -44,9 +45,17 @@ class MyNavbar extends BaseComponent {
                         className={active ? "active" : ""} />;
         }
 
+        const renderNavBrand = () => {
+            const isRoot = history.location.pathname === '/';
+            return  <NavbarBrand tag={Link} to="/">
+                        {!isRoot && <i className="ion-chevron-left" />} 
+                        {isRoot ? 'TOP GITHUB' : 'Back'}
+                    </NavbarBrand>;
+        }
+
         return (
             <Navbar color="primary" expand="md" dark>
-                <NavbarBrand tag={Link} to="/">TOP GITHUB</NavbarBrand>
+                { renderNavBrand() }
 
                 <NavbarToggler onClick={this.toggleNavbar} />
 
